@@ -1,0 +1,127 @@
+<!-- sprawdzić czy są dobrze porobione ścieżki dostępu ./ vs null w tym samym katalogu -->
+<!-- 
+1. dodać ukrytego linka, żeby można się było kontaktować,
+2. może zmienić nazwę strony + practice, 
+3. czy dobrze jest pronom?
+4. zmniejszyć wielkość obrazków jak za duże
+5. dorobić alt do <img>
+6. Images must necessarily be located within a paragraph (<p></p>)???
+7. dorobić alt do img!
+8. sprawdzić czy a: focus (przykład) nie może zlikwidować tej brzydkiej ramki naokoło przycisku START itd
+9. jak można spowodować, żeby po naciśnięciu START aktywnym elementem był  formularz (czyli klikamy i od razu wpisujemy)
+10.Można zmienić ewentualnie sposób wyświetlania formularza gdy jest on elementem aktywnym, żeby było wiadomo, że jest
+11.zamienić header na <nav> - bo to jednak inny cel
+12. podzielić stronę na 2 <section> - to co jest instruction i working station
+13. opanować dziwny margin naokoło nav bar
+14. opanować wyświetlanie w edge (napis do what)
+15. Page was created primarly for training my yet doubtful :) programming skills and for learning french grammar as a second goal (figthing my frustration with uneven fight with french grammar). Don't hesitate to use it if you find it useful. At the moment page works properly only in Chrome. I am working on ... So stay tuned :)  Previous version: 
+16. dodać chyba
+    font-weight: normal;
+    font-style: normal;
+17. zmienić przyciski. użyć background img(url) = fragment pionowego paska i powtórzenie w poziomie: repeat-x. wyszukać gradient od czarnego do białego. ustawić pionowo.
+18. dorobić cienie do przycisków.
+19. przy kolejnych wersjach strony moża dopisywać styling changes
+20. Kolejne wersje można numerować 1.1, 2.3 etc.; zmieniać pierwszą cyfrę przy dużych zmianach
+21. zmiana w form (czy zachować?) UWAGA ZMIENIONE!!!!!! sprawdzić czy napewno działa
+
+22. DODAĆ AUTOFOCUS (czyli, żeby automatycznie, po naciśnięciu START, wskakiwało w okienko do pisania)
+
+Automatically selecting a field
+
+You can automatically place the cursor in one of the fields in your form using the attribute autofocus. Once the visitor loads the page, the cursor appears in this field.
+
+For example, to place the cursor as default in the field name:
+
+<input type="text" name="firstname" id="firstname" autofocus />
+
+From the JavaScript code, you can modify the target event by calling focus  (to add focus) and blur  (to remove it) on a DOM element. 
+
+// Add focus on username input
+usernameElement.focus();
+
+-->
+
+<!doctype html>
+<html>
+
+<head>
+		<meta charset="UTF-8" />
+		<title>double pronom order</title>
+		<link rel="stylesheet" type="text/css" href="index.css">
+		<script type="text/javascript" src="main.js"></script>
+</head>
+
+<body>
+
+	
+	
+		<header>
+			<div class="nav">
+				<ul>
+					<li><a href="how_does_it_work/how_does_it_work.html">how does it work?</a></li>
+					<li><a href="website_changes/website_changes.html">website changes</a></li>
+					<li><a href="about_me/about_me.html">about me</a></li>
+					<li><a href="settings/settings.html"><img src="pictures/setting_button.png" id="setting_button" /></a></li>
+				</ul>
+			</div>
+		</header>
+	<div class="container">	
+		<section>
+		
+			<div class="instruction">
+				<div class="who">
+					<img src="./pictures/noone.png" id="who_now" />
+				</div>
+				<div class="what">
+					<img src="./pictures/gender_3.png" id="gender_now"/>	
+				</div>
+				<div class="whom">
+					<img src="./pictures/noone.png" id="whom_now"/
+				</div>
+			</div>
+		
+			<div class="working_station"> <!-- może zmienić nazwę na main-col? -->
+				<div class="start">
+					<button class="custom_button special_button" onclick="start()">START</button>
+				</div>
+				<div class="working_place">
+					<div class="form_container">
+						<form name="writeAnswer" onsubmit="return validateForm()">
+							<p>
+								<label for="answer">write your answer here</label>
+								<input type="text" name="answer" id="answer" placeholder="write..." />
+								<button class="custom_button special_button" type="submit">READY</button>
+							</p>
+						</form>
+					</div>
+						
+					<div class="letters_container">
+						<div class="buttons">
+							<button class="custom_button" onclick="addFrenchLetter('à')">à</button>
+							<button class="custom_button" onclick="addFrenchLetter('â')">â</button>
+							<button class="custom_button" onclick="addFrenchLetter('ç')">ç</button>
+							<button class="custom_button" onclick="addFrenchLetter('é')">é</button>
+							<button class="custom_button" onclick="addFrenchLetter('è')">è</button>
+							<button class="custom_button" onclick="addFrenchLetter('ê')">ê</button>
+							<button class="custom_button" onclick="addFrenchLetter('ë')">ë</button>
+							<button class="custom_button" onclick="addFrenchLetter('ï')">ï</button>
+							<button class="custom_button" onclick="addFrenchLetter('î')">î</button>
+							<button class="custom_button" onclick="addFrenchLetter('ô')">ô</button>
+							<button class="custom_button" onclick="addFrenchLetter('œ')">œ</button>			
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>	
+		
+		<footer>
+			<p>&copy; 2017 anula</p>
+		</footer>
+	</div>
+</body>
+
+</html>
+
+<!--
+dorobić DIVy: nav, main, About me. Albo też footer HTMLowy. w nim ul, a potem li z display property: inline
+-->
