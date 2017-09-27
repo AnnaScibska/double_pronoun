@@ -21,7 +21,7 @@ function start () {
 	decidedWho = generateWho();
 	decidedWhom = generateWhom();
 	
-	while (isTheSamePerson()){				// for grammar reason some cases had to be excluded
+	while (isTheSamePerson()){				// for grammar reason some cases has to be excluded
 		if (isThirdPerson()) {
 			break;
 		}
@@ -149,7 +149,7 @@ function addWhomToCorrectAnswer (whom) {
 }
 
 function validateForm() {
-	var correctAnswerAsString = correctAnswer.join('');         //przydałoby się toLowerCase()
+	var correctAnswerAsString = correctAnswer.join('');         //add toLowerCase()
     var userAnswer = document.forms["writeAnswer"]["answer"].value;
     if (userAnswer === correctAnswerAsString) {
         alert("Bien fait!");

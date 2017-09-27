@@ -1,1 +1,9 @@
 @import url("../common/main.css");
+
+h1 {
+    margin: 50px;
+}
+
+p {
+    margin-left: 50px;
+}

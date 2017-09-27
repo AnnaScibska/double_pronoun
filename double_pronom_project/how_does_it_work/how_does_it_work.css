@@ -1,1 +1,36 @@
 @import url("../common/main.css");
+
+a{
+    color: black;
+    text-decoration: none;
+}
+
+h1 {
+    margin: 50px;
+}
+
+h2 {
+    margin: 20px;
+}
+
+p {
+    margin-left: 50px;
+}
+
+img {
+    max-width: 600px;
+    width: 100%;
+}
+
+span {
+    color: darkorange;
+}
+
+.gender_picture {
+    display: flex;
+    align-items: center;
+}
+
+#to_show_bottom {
+    margin-bottom: 60px;
+}
